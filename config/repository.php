@@ -138,7 +138,7 @@ return [
        | 'except'  =>['find'],
        */
         'allowed' => [
-            'only' => null,
+            'only'   => null,
             'except' => null,
         ],
     ],
@@ -204,12 +204,12 @@ return [
         |
         */
         'params' => [
-            'search' => 'search',
+            'search'       => 'search',
             'searchFields' => 'searchFields',
-            'filter' => 'filter',
-            'orderBy' => 'orderBy',
-            'sortedBy' => 'sortedBy',
-            'with' => 'with',
+            'filter'       => 'filter',
+            'orderBy'      => 'orderBy',
+            'sortedBy'     => 'sortedBy',
+            'with'         => 'with',
         ],
     ],
     /*
@@ -219,18 +219,18 @@ return [
     |
     */
     'generator' => [
-        'basePath' => app_path(),
+        'basePath'      => app_path(),
         'rootNamespace' => 'App\\',
-        'paths' => [
-            'models' => 'Entities',
-            'repositories' => 'Repositories',
-            'interfaces' => 'Repositories',
-            'transformers' => 'Transformers',
-            'presenters' => 'Presenters',
-            'validators' => 'Validators',
-            'controllers' => 'Http/Controllers',
-            'provider' => 'RepositoryServiceProvider',
-            'criteria' => 'Criteria',
+        'paths'         => [
+            'models'            => 'Entities',
+            'repositories'      => 'Repositories',
+            'interfaces'        => 'Repositories',
+            'transformers'      => 'Transformers',
+            'presenters'        => 'Presenters',
+            'validators'        => 'Validators',
+            'controllers'       => 'Http/Controllers',
+            'provider'          => 'RepositoryServiceProvider',
+            'criteria'          => 'Criteria',
             'stubsOverridePath' => app_path(),
         ],
     ],
