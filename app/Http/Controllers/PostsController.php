@@ -2,13 +2,13 @@
 
 namespace app\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Prettus\Validator\Contracts\ValidatorInterface;
-use Prettus\Validator\Exceptions\ValidatorException;
 use App\Http\Requests\PostCreateRequest;
 use App\Http\Requests\PostUpdateRequest;
 use App\Repositories\PostRepository;
 use App\Validators\PostValidator;
+use Illuminate\Http\Request;
+use Prettus\Validator\Contracts\ValidatorInterface;
+use Prettus\Validator\Exceptions\ValidatorException;
 
 class PostsController extends Controller
 {
@@ -63,7 +63,7 @@ class PostsController extends Controller
 
             $response = [
                 'message' => 'Post created.',
-                'data' => $post->toArray(),
+                'data'    => $post->toArray(),
             ];
 
             if ($request->wantsJson()) {
@@ -74,7 +74,7 @@ class PostsController extends Controller
         } catch (ValidatorException $e) {
             if ($request->wantsJson()) {
                 return response()->json([
-                    'error' => true,
+                    'error'   => true,
                     'message' => $e->getMessageBag(),
                 ]);
             }
@@ -134,7 +134,7 @@ class PostsController extends Controller
 
             $response = [
                 'message' => 'Post updated.',
-                'data' => $post->toArray(),
+                'data'    => $post->toArray(),
             ];
 
             if ($request->wantsJson()) {
@@ -145,7 +145,7 @@ class PostsController extends Controller
         } catch (ValidatorException $e) {
             if ($request->wantsJson()) {
                 return response()->json([
-                    'error' => true,
+                    'error'   => true,
                     'message' => $e->getMessageBag(),
                 ]);
             }
