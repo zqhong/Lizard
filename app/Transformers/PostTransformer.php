@@ -2,8 +2,8 @@
 
 namespace app\Transformers;
 
-use League\Fractal\TransformerAbstract;
 use App\Entities\Post;
+use League\Fractal\TransformerAbstract;
 
 /**
  * Class PostTransformer.
