@@ -1,8 +1,5 @@
 <?php
 
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 /*
         // Authentication Routes...
@@ -23,7 +20,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 class LoginControllerTest extends TestCase
 {
     /**
-     * Test for show login form
+     * Test for show login form.
      */
     public function testShowLoginForm()
     {
@@ -32,7 +29,7 @@ class LoginControllerTest extends TestCase
     }
 
     /**
-     * Test for do login action
+     * Test for do login action.
      */
     public function testLogin()
     {
