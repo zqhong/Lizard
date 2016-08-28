@@ -170,6 +170,7 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
+        Zizaco\Entrust\EntrustServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -227,6 +228,10 @@ return [
         'Validator'    => Illuminate\Support\Facades\Validator::class,
         'View'         => Illuminate\Support\Facades\View::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Entrust' => Zizaco\Entrust\EntrustFacade::class,
+        'role' => Zizaco\Entrust\Middleware\EntrustRole::class,
+        'permission' => Zizaco\Entrust\Middleware\EntrustPermission::class,
+        'ability' => Zizaco\Entrust\Middleware\EntrustAbility::class,
     ],
 
 ];

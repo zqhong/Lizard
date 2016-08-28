@@ -9,7 +9,8 @@
         "laravel/framework": "5.3.*",
         "doctrine/dbal": "^2.5",
         "barryvdh/laravel-debugbar": "^2.2",
-        "prettus/l5-repository": "^2.6"
+        "prettus/l5-repository": "^2.6",
+        "zizaco/entrust": "5.2.x-dev"
     },
     "require-dev": {
         "mockery/mockery": "0.9.*",

@@ -18,7 +18,7 @@ class UsersTableSeeder extends Seeder
 
         $nickname = 'test_';
         foreach (range(1, 25) as $index) {
-            $item = [
+            $data[] = [
                 'username' => $faker->name,
                 'nickname' => sprintf('%s%s', $nickname, $index),
                 'email' => $faker->email,
@@ -26,13 +26,7 @@ class UsersTableSeeder extends Seeder
                 'avatar_url' => '/images/avatar.png',
                 'bio' => $faker->text(25),
                 'signature' => $faker->text(25),
-                'created_at' => Carbon::now()->toDateTimeString(),
-                'updated_at' => Carbon::now()->toDateTimeString(),
             ];
-            if (1 === $index) {
-                $item['email'] = 'admin@lizard.app';
-            }
-            $data[] = $item;
         }
         DB::table('users')->insert($data);
     }
