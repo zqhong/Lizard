@@ -1,5 +1,8 @@
 <?php
 
+use App\Models\User;
+use Illuminate\Database\Eloquent\Model;
+
 return [
 
     /*
@@ -30,7 +33,7 @@ return [
     ],
 
     'stripe' => [
-        'model'  => App\User::class,
+        'model'  => User::class,
         'key'    => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

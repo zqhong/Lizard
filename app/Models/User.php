@@ -1,9 +1,10 @@
 <?php
 
-namespace app;
+namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Zizaco\Entrust\Traits\EntrustUserTrait;
 
 /**
  * App\User.
@@ -16,13 +17,21 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    use EntrustUserTrait;
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'username',
+        'nickname',
+        'email',
+        'password',
+        'avatar_url',
+        'bio',
+        'signature',
     ];
 
     /**
