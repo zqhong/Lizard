@@ -16,11 +16,16 @@ class UsersTableSeeder extends Seeder
 
         $data = [];
 
-        foreach (range(1, 50) as $index) {
+        $nickname = 'test_';
+        foreach (range(1, 25) as $index) {
             $item = [
-                'name' => $faker->name,
+                'username' => $faker->name,
+                'nickname' => sprintf('%s%s', $nickname, $index),
                 'email' => $faker->email,
                 'password' => bcrypt('admin'),
+                'avatar_url' => '/images/avatar.png',
+                'bio' => $faker->text(25),
+                'signature' => $faker->text(25),
                 'created_at' => Carbon::now()->toDateTimeString(),
                 'updated_at' => Carbon::now()->toDateTimeString(),
             ];
