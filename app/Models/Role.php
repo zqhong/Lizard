@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-
 use Zizaco\Entrust\EntrustRole;
 
 class Role extends EntrustRole
@@ -11,9 +10,9 @@ class Role extends EntrustRole
 
     public static function addRole($name, $display_name = null, $description = null)
     {
-        $role = Role::query()->where('name', $name)->first();
+        $role = self::query()->where('name', $name)->first();
         if (empty($role)) {
-            $role = new Role(['name' => $name]);
+            $role = new self(['name' => $name]);
         }
         $role->display_name = $display_name;
         $role->description = $description;

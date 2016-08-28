@@ -1,4 +1,5 @@
 <?php
+
 use App\Models\Permission;
 use App\Models\Role;
 use App\Models\User;
@@ -56,7 +57,6 @@ class EntrustSetupTables extends Migration
                 ->onUpdate('cascade')->onDelete('cascade');
 
             $table->primary(['permission_id', 'role_id']);
-
         });
         $this->addBaseRoleAndPermission();
     }
@@ -99,7 +99,7 @@ class EntrustSetupTables extends Migration
 
 
         // Add role for user
-        if (!$user->hasRole($founder->name)) {
+        if (! $user->hasRole($founder->name)) {
             $user->attachRole($founder);
         }
     }
