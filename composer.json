@@ -17,7 +17,8 @@
         "symfony/css-selector": "3.1.*",
         "symfony/dom-crawler": "3.1.*",
         "barryvdh/laravel-ide-helper": "^2.2",
-        "fzaninotto/faker": "^1.6"
+        "fzaninotto/faker": "^1.6",
+        "laracasts/generators": "^1.1"
     },
     "autoload": {
         "classmap": [
