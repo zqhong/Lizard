@@ -1,18 +1,12 @@
 <?php
 
-namespace App\Models;
+namespace Lizard\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
 
-/**
- * App\User.
- *
- * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
- * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $unreadNotifications
- * @mixin \Eloquent
- */
+
 class User extends Authenticatable
 {
     use Notifiable;

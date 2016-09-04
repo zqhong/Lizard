@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\User;
 
 return [
 
@@ -16,7 +15,7 @@ return [
     */
 
     'defaults' => [
-        'guard'     => 'web',
+        'guard' => 'web',
         'passwords' => 'users',
     ],
 
@@ -39,12 +38,12 @@ return [
 
     'guards' => [
         'web' => [
-            'driver'   => 'session',
+            'driver' => 'session',
             'provider' => 'users',
         ],
 
         'api' => [
-            'driver'   => 'token',
+            'driver' => 'token',
             'provider' => 'users',
         ],
     ],
@@ -69,7 +68,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model'  => User::class,
+            'model' => Lizard\Models\User::class,
             'table' => 'users',
         ],
 
@@ -100,10 +99,11 @@ return [
 
     'passwords' => [
         'users' => [
-            'provider' => 'users',
-            'table'    => 'password_resets',
-            'expire'   => 60,
+            'provider' => Lizard\Models\User::class,
+            'table' => 'password_resets',
+            'expire' => 60,
         ],
     ],
 
+    'model' => Lizard\Models\User::class,
 ];

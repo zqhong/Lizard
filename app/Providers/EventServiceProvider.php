@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Providers;
+namespace Lizard\Providers;
 
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Event;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\SomeEvent' => [
-            'App\Listeners\EventListener',
+        'Lizard\Events\SomeEvent' => [
+            'Lizard\Listeners\EventListener',
         ],
     ];
 

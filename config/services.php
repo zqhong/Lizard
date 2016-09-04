@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\User;
+use Lizard\Models\User;
 use Illuminate\Database\Eloquent\Model;
 
 return [
