@@ -3,17 +3,14 @@
  * Created by PhpStorm.
  * User: zqhong
  * Date: 2016/9/4
- * Time: 16:09
+ * Time: 16:09.
  */
-
 namespace Lizard\Repositories;
-
 
 use Lizard\Models\Thread;
 
 class EloquentThread implements ThreadInterface
 {
-
     public function index($limit = 10, $pageNum = 1)
     {
         return Thread::orderBy('id', 'desc')
@@ -26,12 +23,14 @@ class EloquentThread implements ThreadInterface
         if (empty($thread)) {
             return false;
         }
+
         return $thread;
     }
 
     public function save(array $attributes)
     {
         $thread = new Thread($attributes);
+
         return $thread->save();
     }
 
@@ -41,6 +40,7 @@ class EloquentThread implements ThreadInterface
         if (empty($thread)) {
             return false;
         }
+
         return $thread->update($attributes);
     }
 
@@ -60,6 +60,5 @@ class EloquentThread implements ThreadInterface
 
     public function byTag($limit = 10, $pageNum = 1)
     {
-        
     }
 }

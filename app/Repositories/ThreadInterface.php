@@ -3,16 +3,14 @@
  * Created by PhpStorm.
  * User: zqhong
  * Date: 2016/9/4
- * Time: 16:03
+ * Time: 16:03.
  */
-
 namespace Lizard\Repositories;
-
 
 interface ThreadInterface
 {
     /**
-     * List threads
+     * List threads.
      *
      * @param int $limit
      * @param int $pageNum
@@ -21,7 +19,7 @@ interface ThreadInterface
     public function index($limit = 10, $pageNum = 1);
 
     /**
-     * Find thread by slug
+     * Find thread by slug.
      *
      * @param $slug
      * @return mixed
@@ -29,7 +27,7 @@ interface ThreadInterface
     public function bySlug($slug);
 
     /**
-     * Find threads by tag
+     * Find threads by tag.
      *
      * @param int $limit
      * @param int $pageNum
@@ -38,15 +36,15 @@ interface ThreadInterface
     public function byTag($limit = 10, $pageNum = 1);
 
     /**
-     * Find threads by user UUID
-     * 
+     * Find threads by user UUID.
+     *
      * @param $user_uuid
      * @return mixed
      */
     public function byUser($user_uuid);
 
     /**
-     * Save a new thread
+     * Save a new thread.
      *
      * @param array $attributes
      * @return mixed
@@ -54,7 +52,7 @@ interface ThreadInterface
     public function save(array $attributes);
 
     /**
-     * Store new attributes for a exist thread
+     * Store new attributes for a exist thread.
      *
      * @param $slug
      * @param $attributes
@@ -63,7 +61,7 @@ interface ThreadInterface
     public function store($slug, $attributes);
 
     /**
-     * Delete a thread
+     * Delete a thread.
      *
      * @param $slug
      * @return mixed

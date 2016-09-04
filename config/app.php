@@ -232,7 +232,7 @@ return [
         'permission' => Zizaco\Entrust\Middleware\EntrustPermission::class,
         'ability' => Zizaco\Entrust\Middleware\EntrustAbility::class,
         'Pinyin' => Overtrue\LaravelPinyin\Facades\Pinyin::class,
-        'Uuid' => Webpatser\Uuid\Uuid::class
+        'Uuid' => Webpatser\Uuid\Uuid::class,
     ],
 
 ];

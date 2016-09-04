@@ -5,7 +5,6 @@ use Illuminate\Database\Schema\Blueprint;
 
 class CreateThreadsTable extends Migration
 {
-
     /**
      * Run the migrations.
      *
@@ -35,5 +34,4 @@ class CreateThreadsTable extends Migration
     {
         Schema::drop('threads');
     }
-
 }
