@@ -13,13 +13,13 @@
 
 use Lizard\Models\User;
 use Lizard\Models\Thread;
-use Webpatser\Uuid\Uuid;
 
-/**
+/*
  * User model factory
  */
 $factory->define(User::class, function (Faker\Generator $faker) {
     $name = $faker->name;
+
     return [
         'remember_token' => str_random(10),
         'username' => $name,
@@ -32,13 +32,14 @@ $factory->define(User::class, function (Faker\Generator $faker) {
     ];
 });
 
-/**
+/*
  * Thread model factory
  */
 $factory->define(Thread::class, function (Faker\Generator $faker) {
     $body = $faker->text;
     $title = $faker->sentence();
     $slug = implode('-', app('pinyin')->convert($title));
+
     return [
         'title' => $title,
         'slug' => $slug,

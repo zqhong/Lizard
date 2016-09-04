@@ -3,14 +3,12 @@
  * Created by PhpStorm.
  * User: zqhong
  * Date: 2016/9/4
- * Time: 16:15
+ * Time: 16:15.
  */
-
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Support\Collection;
 use Lizard\Models\Thread;
 use Lizard\Repositories\ThreadInterface;
-
 
 class EloquentThreadTest extends TestCase
 {
@@ -86,17 +84,13 @@ class EloquentThreadTest extends TestCase
 
     public function testByUser()
     {
-
     }
 
     public function testDelete()
     {
-
     }
-
 
     public function testByTag()
     {
-
     }
 }
