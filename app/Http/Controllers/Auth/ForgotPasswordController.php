@@ -1,8 +1,8 @@
 <?php
 
-namespace app\Http\Controllers\Auth;
+namespace Lizard\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
+use Lizard\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
 class ForgotPasswordController extends Controller

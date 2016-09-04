@@ -11,15 +11,37 @@
 |
 */
 
-use App\Models\User;
+use Lizard\Models\User;
+use Lizard\Models\Thread;
 
+/**
+ * User model factory
+ */
 $factory->define(User::class, function (Faker\Generator $faker) {
-    static $password;
-
+    $name = $faker->name;
     return [
-        'name'           => $faker->name,
-        'email'          => $faker->safeEmail,
-        'password'       => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
+        'username' => $name,
+        'nickname' => $name,
+        'email' => $faker->safeEmail,
+        'password' => bcrypt('admin'),
+        'avatar_url' => '/images/avatar.png',
+        'bio' => $faker->text(25),
+        'signature' => $faker->text(25),
+    ];
+});
+
+/**
+ * Thread model factory
+ */
+$factory->define(Thread::class, function (Faker\Generator $faker) {
+    $body = $faker->text;
+    return [
+        'title' => $faker->sentence(),
+        'body' => $body,
+        'original_body' => $body,
+        'user_id' => 1,
+        'reply_count' => 0,
+        'last_reply_user' => 1,
     ];
 });

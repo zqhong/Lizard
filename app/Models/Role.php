@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace Lizard\Models;
 
 use Zizaco\Entrust\EntrustRole;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Providers;
+namespace Lizard\Providers;
 
 use Illuminate\Support\Facades\Broadcast;
 use Illuminate\Support\ServiceProvider;

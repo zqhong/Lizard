@@ -172,11 +172,12 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Lizard\Providers\AppServiceProvider::class,
+        // Lizard\Providers\BroadcastServiceProvider::class,
+        Lizard\Providers\AuthServiceProvider::class,
+        Lizard\Providers\EventServiceProvider::class,
+        Lizard\Providers\RouteServiceProvider::class,
+        Lizard\Providers\RepoServiceProvider::class,
 
     ],
 

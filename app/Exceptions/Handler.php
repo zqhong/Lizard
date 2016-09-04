@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Exceptions;
+namespace Lizard\Exceptions;
 
 use Exception;
 use Illuminate\Auth\AuthenticationException;

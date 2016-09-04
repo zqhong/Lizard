@@ -1,9 +1,9 @@
 <?php
 
-namespace app\Http\Controllers\Auth;
+namespace Lizard\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Models\User;
+use Lizard\Http\Controllers\Controller;
+use Lizard\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Validator;
 
