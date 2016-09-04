@@ -12,5 +12,5 @@ class Thread extends Model
      * 
      * @var array
      */
-    protected $fillable = ['title', 'body', 'original_body', 'user_id', 'reply_count', 'last_reply_user'];
+    protected $fillable = ['title', 'slug', 'body', 'original_body', 'user_id', 'reply_count', 'last_reply_user'];
 }

@@ -168,6 +168,7 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         Zizaco\Entrust\EntrustServiceProvider::class,
+        Overtrue\LaravelPinyin\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -230,6 +231,8 @@ return [
         'role' => Zizaco\Entrust\Middleware\EntrustRole::class,
         'permission' => Zizaco\Entrust\Middleware\EntrustPermission::class,
         'ability' => Zizaco\Entrust\Middleware\EntrustAbility::class,
+        'Pinyin' => Overtrue\LaravelPinyin\Facades\Pinyin::class,
+        'Uuid' => Webpatser\Uuid\Uuid::class
     ],
 
 ];

@@ -15,9 +15,10 @@ interface ThreadInterface
      * List threads
      *
      * @param int $limit
+     * @param int $pageNum
      * @return mixed
      */
-    public function index($limit = 10);
+    public function index($limit = 10, $pageNum = 1);
 
     /**
      * Find thread by slug
@@ -30,10 +31,42 @@ interface ThreadInterface
     /**
      * Find threads by tag
      *
-     * @param $tag
-     * @param int $page
      * @param int $limit
+     * @param int $pageNum
      * @return mixed
      */
-    public function byTag($tag, $page = 1, $limit = 10);
+    public function byTag($limit = 10, $pageNum = 1);
+
+    /**
+     * Find threads by user UUID
+     * 
+     * @param $user_uuid
+     * @return mixed
+     */
+    public function byUser($user_uuid);
+
+    /**
+     * Save a new thread
+     *
+     * @param array $attributes
+     * @return mixed
+     */
+    public function save(array $attributes);
+
+    /**
+     * Store new attributes for a exist thread
+     *
+     * @param $slug
+     * @param $attributes
+     * @return mixed
+     */
+    public function store($slug, $attributes);
+
+    /**
+     * Delete a thread
+     *
+     * @param $slug
+     * @return mixed
+     */
+    public function delete($slug);
 }

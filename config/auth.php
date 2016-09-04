@@ -105,4 +105,5 @@ return [
         ],
     ],
 
+    'model' => Lizard\Models\User::class,
 ];
