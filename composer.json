@@ -1,57 +1,62 @@
 {
-    "name": "zqhong/lizard",
-    "description": "A free, open-source forum software",
-    "keywords": ["lizard", "laravel", "forum", "bbs"],
-    "license": "MIT",
-    "type": "project",
-    "require": {
-        "php": ">=5.6.4",
-        "laravel/framework": "5.3.*",
-        "doctrine/dbal": "^2.5",
-        "barryvdh/laravel-debugbar": "^2.2",
-        "zizaco/entrust": "5.2.x-dev",
-        "overtrue/laravel-pinyin": "~3.0",
-        "webpatser/laravel-uuid": "2.*"
-    },
-    "require-dev": {
-        "mockery/mockery": "^0.9.5",
-        "phpunit/phpunit": "~5.0",
-        "symfony/css-selector": "3.1.*",
-        "symfony/dom-crawler": "3.1.*",
-        "barryvdh/laravel-ide-helper": "^2.2",
-        "fzaninotto/faker": "^1.6",
-        "laracasts/generators": "^1.1"
-    },
-    "autoload": {
-        "classmap": [
-            "database"
-        ],
-        "psr-4": {
-            "Lizard\\": "app/"
-        }
-    },
-    "autoload-dev": {
-        "classmap": [
-            "tests/TestCase.php"
-        ]
-    },
-    "scripts": {
-        "post-root-package-install": [
-            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ],
-        "post-create-project-cmd": [
-            "php artisan key:generate"
-        ],
-        "post-install-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postInstall",
-            "php artisan optimize"
-        ],
-        "post-update-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
-            "php artisan clear-compiled"
-        ]
-    },
-    "config": {
-        "preferred-install": "dist"
+  "name": "zqhong/lizard",
+  "description": "A free, open-source forum software",
+  "keywords": [
+    "lizard",
+    "laravel",
+    "forum",
+    "bbs"
+  ],
+  "license": "MIT",
+  "type": "project",
+  "require": {
+    "php": ">=5.6.4",
+    "laravel/framework": "5.3.*",
+    "doctrine/dbal": "^2.5",
+    "zizaco/entrust": "5.2.x-dev",
+    "overtrue/laravel-pinyin": "~3.0",
+    "webpatser/laravel-uuid": "2.*"
+  },
+  "require-dev": {
+    "mockery/mockery": "^0.9.5",
+    "phpunit/phpunit": "~5.0",
+    "symfony/css-selector": "3.1.*",
+    "symfony/dom-crawler": "3.1.*",
+    "barryvdh/laravel-ide-helper": "^2.2",
+    "fzaninotto/faker": "^1.6",
+    "laracasts/generators": "^1.1",
+    "barryvdh/laravel-debugbar": "^2.2"
+  },
+  "autoload": {
+    "classmap": [
+      "database"
+    ],
+    "psr-4": {
+      "Lizard\\": "app/"
     }
+  },
+  "autoload-dev": {
+    "classmap": [
+      "tests/TestCase.php"
+    ]
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+      "php artisan key:generate"
+    ],
+    "post-install-cmd": [
+      "Illuminate\\Foundation\\ComposerScripts::postInstall",
+      "php artisan optimize"
+    ],
+    "post-update-cmd": [
+      "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+      "php artisan clear-compiled"
+    ]
+  },
+  "config": {
+    "preferred-install": "dist"
+  }
 }
