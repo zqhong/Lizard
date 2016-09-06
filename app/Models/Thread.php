@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Thread extends Model
 {
     /**
-     * 定义可以被修改的列.
+     * The attributes that are mass assignable.
      *
      * @var array
      */
