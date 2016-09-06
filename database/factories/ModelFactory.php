@@ -46,6 +46,7 @@ $factory->define(Thread::class, function (Faker\Generator $faker) {
         'body' => $body,
         'original_body' => $body,
         'user_id' => 1,
+        'node_id' => 1,
         'reply_count' => 0,
         'last_reply_user' => 1,
     ];

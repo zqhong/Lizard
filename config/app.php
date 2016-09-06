@@ -177,7 +177,6 @@ return [
         Lizard\Providers\AuthServiceProvider::class,
         Lizard\Providers\EventServiceProvider::class,
         Lizard\Providers\RouteServiceProvider::class,
-        Lizard\Providers\RepoServiceProvider::class,
 
     ],
 
