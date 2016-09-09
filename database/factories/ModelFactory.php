@@ -11,8 +11,9 @@
 |
 */
 
-use Lizard\Models\User;
+use Lizard\Models\Tag;
 use Lizard\Models\Thread;
+use Lizard\Models\User;
 
 /*
  * User model factory
@@ -49,5 +50,15 @@ $factory->define(Thread::class, function (Faker\Generator $faker) {
         'node_id' => 1,
         'reply_count' => 0,
         'last_reply_user' => 1,
+    ];
+});
+
+/**
+ * Tag model factory
+ */
+$factory->define(Tag::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'thread_id' => random_int(1, 25),
     ];
 });
