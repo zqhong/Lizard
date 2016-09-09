@@ -15,7 +15,8 @@
     "doctrine/dbal": "^2.5",
     "zizaco/entrust": "5.2.x-dev",
     "overtrue/laravel-pinyin": "~3.0",
-    "webpatser/laravel-uuid": "2.*"
+    "webpatser/laravel-uuid": "2.*",
+    "bosnadev/repositories": " 0.*"
   },
   "require-dev": {
     "mockery/mockery": "^0.9.5",

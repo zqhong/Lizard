@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 use Lizard\Models\Thread;
 use Lizard\Models\User;
 
