@@ -14,6 +14,7 @@ namespace Lizard\Http\Controllers;
 use Lizard\Http\Requests;
 use Lizard\Models\Thread;
 use Lizard\Repositories\ThreadsRepository;
+use Lizard\Models\User;
 
 class HomeController extends Controller
 {
@@ -38,7 +39,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $threads = $this->thread->with(['tags'])->all();
-        var_dump(app('debugbar')->info($threads));
+        $users = factory(User::class, 10)->make();
+        User::insert($users->toArray());
+
+        return 1;
     }
 }
