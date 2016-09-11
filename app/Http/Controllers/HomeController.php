@@ -39,9 +39,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = factory(User::class, 10)->make();
-        User::insert($users->toArray());
-
-        return 1;
+        $threads = $this->thread->fetchThreads();
+        return view('threads.index', compact('threads'));
     }
 }

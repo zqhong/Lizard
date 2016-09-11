@@ -27,4 +27,12 @@ class ThreadsRepository extends Repository
     {
         return Thread::class;
     }
+
+    /**
+     * @return mixed
+     */
+    public function fetchThreads()
+    {
+        return $this->with(['node', 'user', 'lastReplyUser'])->paginate(10);;
+    }
 }

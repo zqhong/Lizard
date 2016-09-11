@@ -19,9 +19,10 @@ class CreateThreadsTable extends Migration
             $table->text('body');
             $table->text('original_body');
             $table->integer('user_id');
+            $table->integer('section_id');
             $table->integer('node_id');
             $table->integer('reply_count');
-            $table->integer('last_reply_user');
+            $table->integer('last_reply_user_id');
             $table->timestamps();
         });
     }

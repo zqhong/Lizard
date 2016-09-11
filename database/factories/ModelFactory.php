@@ -11,7 +11,11 @@
 |
 */
 
+use Lizard\Models\Node;
+use Lizard\Models\Reply;
+use Lizard\Models\Section;
 use Lizard\Models\Tag;
+use Lizard\Models\Taggable;
 use Lizard\Models\Thread;
 use Lizard\Models\User;
 
@@ -47,9 +51,30 @@ $factory->define(Thread::class, function (Faker\Generator $faker) {
         'body' => $body,
         'original_body' => $body,
         'user_id' => 1,
-        'node_id' => 1,
+        'node_id' => rand(1, 25),
+        'section_id' => rand(1, 25),
         'reply_count' => 0,
-        'last_reply_user' => 1,
+        'last_reply_user_id' => 1,
+        'created_at' => time(),
+        'updated_at' => time(),
+    ];
+});
+
+/**
+ * Reply model factory
+ */
+$factory->define(Reply::class, function (Faker\Generator $faker) {
+    $body = $faker->text;
+    $devices = ['iPhone', 'Android', 'web', 'Windows', 'MacOS', 'Linux'];
+
+    return [
+        'thread_id' => rand(1, 25),
+        'user_id' => 1,
+        'original_body' => $body,
+        'body' => $body,
+        'device_name' => $devices[array_rand($devices)],
+        'created_at' => time(),
+        'updated_at' => time(),
     ];
 });
 
@@ -59,6 +84,42 @@ $factory->define(Thread::class, function (Faker\Generator $faker) {
 $factory->define(Tag::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
-        'thread_id' => random_int(1, 25),
+        'created_at' => time(),
+        'updated_at' => time(),
+    ];
+});
+
+
+/**
+ * TagThread model factory
+ */
+$factory->define(Taggable::class, function () {
+    return [
+        'tag_id' => rand(1, 25),
+        'taggable_id' => rand(1, 25),
+        'taggable_type' => 'Lizard\Models\Thread',
+    ];
+});
+
+/**
+ * Section model factory
+ */
+$factory->define(Section::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'created_at' => time(),
+        'updated_at' => time(),
+    ];
+});
+
+/**
+ * Node model factory
+ */
+$factory->define(Node::class, function (Faker\Generator $faker) {
+    return [
+        'section_id' => rand(1, 25),
+        'name' => $faker->name,
+        'created_at' => time(),
+        'updated_at' => time(),
     ];
 });
