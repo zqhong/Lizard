@@ -12,9 +12,7 @@
 namespace Lizard\Http\Controllers;
 
 use Input;
-use Lizard\Http\Requests;
 use Lizard\Models\Thread;
-use Lizard\Models\User;
 use Lizard\Repositories\Criteria\Thread\Filter;
 use Lizard\Repositories\ThreadsRepository;
 
@@ -35,7 +33,6 @@ class HomeController extends Controller
         $this->thread = $thread;
     }
 
-
     /**
      * @return mixed
      */
@@ -43,6 +40,7 @@ class HomeController extends Controller
     {
         $this->thread->pushCriteria(new Filter(Input::query('filter')));
         $threads = $this->thread->fetchThreads();
+
         return view('threads.index', compact('threads'));
     }
 }

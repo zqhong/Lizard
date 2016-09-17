@@ -11,15 +11,13 @@
 
 namespace Lizard\Repositories;
 
-
 use Bosnadev\Repositories\Eloquent\Repository;
 use Lizard\Models\Thread;
 
 class ThreadsRepository extends Repository
 {
-
     /**
-     * Specify Model class name
+     * Specify Model class name.
      *
      * @return string
      */
@@ -34,6 +32,7 @@ class ThreadsRepository extends Repository
     public function fetchThreads()
     {
         $this->applyCriteria();
-        return $this->with(['node', 'user', 'lastReplyUser'])->paginate(10);;
+
+        return $this->with(['node', 'user', 'lastReplyUser'])->paginate(10);
     }
 }

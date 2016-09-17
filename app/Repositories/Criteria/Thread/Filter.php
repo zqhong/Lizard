@@ -11,10 +11,8 @@
 
 namespace Lizard\Repositories\Criteria\Thread;
 
-
 use Bosnadev\Repositories\Contracts\RepositoryInterface as Repository;
 use Bosnadev\Repositories\Criteria\Criteria;
-use Bosnadev\Repositories\Criteria\RepositoryInterface;
 use Lizard\Models\Thread;
 
 class Filter extends Criteria

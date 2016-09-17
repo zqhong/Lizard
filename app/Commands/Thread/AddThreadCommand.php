@@ -11,7 +11,6 @@
 
 namespace Lizard\Commands\Thread;
 
-
 use Lizard\Events\AfterAddThreadEvent;
 use Lizard\Events\BeforeAddThreadEvent;
 use Lizard\Models\Thread;
@@ -19,35 +18,35 @@ use Lizard\Models\Thread;
 final class AddThreadCommand
 {
     /**
-     * Thread title
+     * Thread title.
      *
      * @var string
      */
     protected $title;
 
     /**
-     * Thread body
+     * Thread body.
      *
      * @var string
      */
     protected $body;
 
     /**
-     * The author uid of thread
+     * The author uid of thread.
      *
-     * @var integer
+     * @var int
      */
     protected $user_id;
 
     /**
-     * The node id of thread
+     * The node id of thread.
      *
-     * @var integer
+     * @var int
      */
     protected $node_id;
 
     /**
-     * The tags of thread
+     * The tags of thread.
      *
      * @var array
      */
@@ -90,6 +89,7 @@ final class AddThreadCommand
         $thread = Thread::create($data);
 
         event(new AfterAddThreadEvent($thread));
+
         return $thread;
     }
 }

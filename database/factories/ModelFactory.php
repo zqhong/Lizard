@@ -58,7 +58,7 @@ $factory->define(Thread::class, function (Faker\Generator $faker) {
     ];
 });
 
-/**
+/*
  * Reply model factory
  */
 $factory->define(Reply::class, function (Faker\Generator $faker) {
@@ -76,7 +76,7 @@ $factory->define(Reply::class, function (Faker\Generator $faker) {
     ];
 });
 
-/**
+/*
  * Tag model factory
  */
 $factory->define(Tag::class, function (Faker\Generator $faker) {
@@ -88,7 +88,7 @@ $factory->define(Tag::class, function (Faker\Generator $faker) {
 });
 
 
-/**
+/*
  * TagThread model factory
  */
 $factory->define(Taggable::class, function () {
@@ -99,7 +99,7 @@ $factory->define(Taggable::class, function () {
     ];
 });
 
-/**
+/*
  * Section model factory
  */
 $factory->define(Section::class, function (Faker\Generator $faker) {
@@ -110,7 +110,7 @@ $factory->define(Section::class, function (Faker\Generator $faker) {
     ];
 });
 
-/**
+/*
  * Node model factory
  */
 $factory->define(Node::class, function (Faker\Generator $faker) {
