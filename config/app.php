@@ -1,6 +1,7 @@
 <?php
 
 
+
 return [
 
     /*
@@ -161,6 +162,8 @@ return [
         Illuminate\Auth\Passwords\PasswordResetServiceProvider::class,
         Illuminate\Session\SessionServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Illuminate\Translation\TranslationServiceProvider::class,
+        Illuminate\Validation\ValidationServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -169,6 +172,7 @@ return [
         Zizaco\Entrust\EntrustServiceProvider::class,
         Overtrue\LaravelPinyin\ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Bootstrapper\BootstrapperL5ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -235,6 +239,7 @@ return [
         'Uuid' => Webpatser\Uuid\Uuid::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Panel' => Bootstrapper\Facades\Panel::class,
     ],
 
 ];

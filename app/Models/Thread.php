@@ -5,15 +5,38 @@ namespace Lizard\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User;
+use Watson\Validating\ValidatingTrait;
 
 class Thread extends Model
 {
+    use ValidatingTrait;
+
+    /**
+     * Whether the model should throw a ValidationException if it fails validation
+     * @var bool
+     */
+    protected $throwValidationExceptions = true;
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['title', 'slug', 'body', 'original_body', 'user_id', 'reply_count', 'last_reply_user_id'];
+    protected $fillable = ['title', 'body', 'original_body', 'user_id', 'section_id', 'node_id', 'reply_count', 'last_reply_user_id'];
+
+    /**
+     * The validation rules
+     *
+     * @var array
+     */
+    protected $rules = [
+        'title' => 'required',
+        'body' => 'required',
+        'original_body' => 'required',
+        'user_id' => 'required|integer',
+        'section_id' => 'required|integer',
+        'node_id' => 'required|integer',
+    ];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany

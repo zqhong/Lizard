@@ -12,6 +12,10 @@
 namespace Lizard\Commands\Thread;
 
 
+use Lizard\Events\AfterAddThreadEvent;
+use Lizard\Events\BeforeAddThreadEvent;
+use Lizard\Models\Thread;
+
 final class AddThreadCommand
 {
     /**
@@ -50,18 +54,6 @@ final class AddThreadCommand
     protected $tags;
 
     /**
-     * The validation rules
-     *
-     * @var array
-     */
-    protected $rules = [
-        'title' => 'required|string',
-        'body' => 'required|string',
-        'user_id' => 'int',
-        'node_id' => 'int',
-    ];
-
-    /**
      * AddThreadCommand constructor.
      *
      * @param $title
@@ -79,43 +71,25 @@ final class AddThreadCommand
         $this->tags = $tags;
     }
 
-    /**
-     * @return string
-     */
-    public function getTitle()
+    public function handle()
     {
-        return $this->title;
-    }
+        $data = [
+            'title' => $this->title,
+            'slug' => $this->title,
+            'body' => $this->body,
+            'original_body' => $this->body,
+            'user_id' => $this->user_id,
+            'section_id' => 1,
+            'node_id' => $this->node_id,
+            'reply_count' => 0,
+            'last_reply_user_id' => $this->user_id,
+        ];
 
-    /**
-     * @return string
-     */
-    public function getBody()
-    {
-        return $this->body;
-    }
+        event(new BeforeAddThreadEvent($data));
 
-    /**
-     * @return int
-     */
-    public function getUserId()
-    {
-        return $this->user_id;
-    }
+        $thread = Thread::create($data);
 
-    /**
-     * @return int
-     */
-    public function getNodeId()
-    {
-        return $this->node_id;
-    }
-
-    /**
-     * @return array
-     */
-    public function getTags()
-    {
-        return $this->tags;
+        event(new AfterAddThreadEvent($thread));
+        return $thread;
     }
 }

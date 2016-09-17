@@ -25,6 +25,8 @@ use Redirect;
 
 class ThreadController extends Controller
 {
+
+
     /**
      * @var ThreadsRepository
      */
@@ -51,6 +53,9 @@ class ThreadController extends Controller
         return view('threads.create', compact('sections', 'nodes'));
     }
 
+    /**
+     * @return $this
+     */
     public function store()
     {
         $thread_data = Input::get('thread');
@@ -72,12 +77,16 @@ class ThreadController extends Controller
         }
 
         return Redirect::route('thread.show', [$thread->id])
-            ->withSuccess('add thread success');
+            ->withSuccess('Add thread success');
     }
 
-    public function show($slug)
+    /**
+     * @param $thread_id
+     * @return mixed
+     */
+    public function show($thread_id)
     {
-        $thread = Thread::where('slug', $slug)->with('user', 'node')->firstOrFail();
+        $thread = Thread::where('id', $thread_id)->with('user', 'node')->firstOrFail();
 
         return view('threads.show')
             ->withThread($thread);

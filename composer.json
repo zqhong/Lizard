@@ -19,7 +19,8 @@
     "bosnadev/repositories": " 0.*",
     "anahkiasen/former": "^4.0",
     "laravelcollective/html": "^5.3",
-    "alt-three/validator": "^1.5"
+    "patricktalmadge/bootstrapper": "^5.9",
+    "watson/validating": "^3.0"
   },
   "require-dev": {
     "mockery/mockery": "^0.9.5",

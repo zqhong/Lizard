@@ -43,11 +43,9 @@ $factory->define(User::class, function (Faker\Generator $faker) {
 $factory->define(Thread::class, function (Faker\Generator $faker) {
     $body = $faker->text;
     $title = $faker->sentence();
-    $slug = implode('-', app('pinyin')->convert($title));
 
     return [
         'title' => $title,
-        'slug' => $slug,
         'body' => $body,
         'original_body' => $body,
         'user_id' => 1,

@@ -8,6 +8,7 @@
 </head>
 <body>
 <div class="container">
+    @include('partials.error')
     @yield('content')
 </div>
 <script src="{{ elixir('dist/js/all.js') }}"></script>
