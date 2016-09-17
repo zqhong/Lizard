@@ -15,7 +15,7 @@ namespace Lizard\Repositories;
 use Bosnadev\Repositories\Eloquent\Repository;
 use Lizard\Models\Section;
 
-class SectionRepository extends Repository
+class SectionsRepository extends Repository
 {
     /**
      * Specify Model class name

@@ -16,7 +16,10 @@
     "zizaco/entrust": "5.2.x-dev",
     "overtrue/laravel-pinyin": "~3.0",
     "webpatser/laravel-uuid": "2.*",
-    "bosnadev/repositories": " 0.*"
+    "bosnadev/repositories": " 0.*",
+    "anahkiasen/former": "^4.0",
+    "laravelcollective/html": "^5.3",
+    "alt-three/validator": "^1.5"
   },
   "require-dev": {
     "mockery/mockery": "^0.9.5",

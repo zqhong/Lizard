@@ -1,0 +1,24 @@
+{
+  "name": "Lizard",
+  "description": "",
+  "main": "",
+  "authors": [
+    "zqhong <i@zqhong.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/zqhong/Lizard",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "vendor/bower_components"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "select2": "^4.0.3",
+    "jquery": "^3.1.0"
+  }
+}

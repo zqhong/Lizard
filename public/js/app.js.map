@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.js"],"names":[],"mappings":"AAAA;AACA;AACA","file":"app.js","sourcesContent":["$(\".select2-tags\").select2({\r\n    tags: true,\r\n});"],"sourceRoot":"/source/"}

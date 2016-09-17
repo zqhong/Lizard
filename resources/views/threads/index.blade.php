@@ -5,6 +5,7 @@
     @foreach($threads as $thread)
         <h3>{{ $thread->title }}</h3>
         <p>
+        <div>thread_id: {{ $thread->id }}</div>
         <div>author: {{ $thread->user->nickname }}</div>
         <div>node: {{ $thread->node->name }}</div>
         <div>last reply user: {{ $thread->lastReplyUser->username }}</div>

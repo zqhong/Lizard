@@ -2,6 +2,7 @@
 
 namespace Lizard\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User;
 
@@ -52,5 +53,13 @@ class Thread extends Model
     public function replies()
     {
         return $this->hasMany(Reply::class);
+    }
+
+    /**
+     * @param Builder $query
+     */
+    public function scopeRecentReply($query)
+    {
+        return $query->orderBy('updated_at', 'desc');
     }
 }

@@ -33,6 +33,7 @@ class ThreadsRepository extends Repository
      */
     public function fetchThreads()
     {
+        $this->applyCriteria();
         return $this->with(['node', 'user', 'lastReplyUser'])->paginate(10);;
     }
 }

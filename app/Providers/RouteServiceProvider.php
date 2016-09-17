@@ -3,7 +3,8 @@
 namespace Lizard\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Route;
+use Illuminate\Routing\Router;
+use Route;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -29,54 +30,11 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function map()
     {
-        $this->mapForumRoutes();
-        
-        $this->mapWebRoutes();
-
-        $this->mapApiRoutes();
-    }
-
-    /**
-     * Define the "web" routes for the application.
-     *
-     * These routes all receive session state, CSRF protection, etc.
-     */
-    protected function mapWebRoutes()
-    {
-        Route::group([
-            'middleware' => 'web',
-            'namespace' => $this->namespace,
-        ], function ($router) {
-            require base_path('routes/web.php');
-        });
-    }
-
-    /**
-     * Define the "api" routes for the application.
-     *
-     * These routes are typically stateless.
-     */
-    protected function mapApiRoutes()
-    {
-        Route::group([
-            'middleware' => 'api',
-            'namespace' => $this->namespace,
-            'prefix' => 'api',
-        ], function ($router) {
-            require base_path('routes/api.php');
-        });
-    }
-
-    /**
-     * Define the "forum" routes for the application.
-     */
-    protected function mapForumRoutes()
-    {
-        Route::group([
-            'middleware' => ['web'],
-            'namespace' => $this->namespace,
-        ], function ($router) {
-            require base_path('routes/forum.php');
+        Route::group(['namespace' => $this->namespace], function (Router $router) {
+            $route_files = glob(sprintf('%s/*.php', base_path('routes')));
+            foreach ($route_files as $file) {
+                require $file;
+            }
         });
     }
 }

@@ -8,7 +8,12 @@
  * @encoding UTF-8
  */
 
+Auth::routes();
+
 Route::get('/', [
     'as' => 'home',
     'uses' => 'HomeController@index',
 ]);
+
+
+Route::resource('thread', 'ThreadController');
