@@ -8,12 +8,13 @@
  * @encoding UTF-8
  */
 
-Auth::routes();
+Route::group(['middleware' => 'web'], function () {
+    Auth::routes();
 
-Route::get('/', [
-    'as' => 'home',
-    'uses' => 'HomeController@index',
-]);
+    Route::get('/', [
+        'as' => 'home',
+        'uses' => 'HomeController@index',
+    ]);
 
-
-Route::resource('thread', 'ThreadController');
+    Route::resource('thread', 'ThreadController');
+});

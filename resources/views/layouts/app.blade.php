@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ elixir('css/app.css') }}">
 </head>
 <body>
-<div class="row">
+<div class="container">
     @yield('content')
 </div>
 <script src="{{ elixir('dist/js/all.js') }}"></script>

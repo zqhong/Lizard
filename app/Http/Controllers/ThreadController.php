@@ -19,6 +19,7 @@ use Input;
 use Lizard\Commands\Thread\AddThreadCommand;
 use Lizard\Models\Node;
 use Lizard\Models\Section;
+use Lizard\Models\Thread;
 use Lizard\Repositories\ThreadsRepository;
 use Redirect;
 
@@ -36,8 +37,7 @@ class ThreadController extends Controller
     public function __construct(ThreadsRepository $thread)
     {
         $this->thread = $thread;
-
-        $this->middleware(['web']);
+        $this->middleware(['auth'])->except(['show']);
     }
 
     /**
@@ -73,5 +73,13 @@ class ThreadController extends Controller
 
         return Redirect::route('thread.show', [$thread->id])
             ->withSuccess('add thread success');
+    }
+
+    public function show($slug)
+    {
+        $thread = Thread::where('slug', $slug)->with('user', 'node')->firstOrFail();
+
+        return view('threads.show')
+            ->withThread($thread);
     }
 }
