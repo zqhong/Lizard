@@ -6,7 +6,6 @@ use Lizard\Models\Reply;
 use Lizard\Models\Section;
 use Lizard\Models\Tag;
 use Lizard\Models\Taggable;
-use Lizard\Models\TagThread;
 use Lizard\Models\Thread;
 use Lizard\Models\User;
 

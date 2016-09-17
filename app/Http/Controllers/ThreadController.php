@@ -11,10 +11,8 @@
 
 namespace Lizard\Http\Controllers;
 
-
 use AltThree\Validator\ValidationException;
 use Auth;
-use Former;
 use Input;
 use Lizard\Commands\Thread\AddThreadCommand;
 use Lizard\Models\Node;
@@ -25,8 +23,6 @@ use Redirect;
 
 class ThreadController extends Controller
 {
-
-
     /**
      * @var ThreadsRepository
      */
