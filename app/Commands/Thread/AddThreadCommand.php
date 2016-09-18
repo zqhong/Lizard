@@ -11,6 +11,7 @@
 
 namespace Lizard\Commands\Thread;
 
+use Lizard\Commands\Tag\AddTagCommand;
 use Lizard\Events\AfterAddThreadEvent;
 use Lizard\Events\BeforeAddThreadEvent;
 use Lizard\Models\Thread;
@@ -70,6 +71,11 @@ final class AddThreadCommand
         $this->tags = $tags;
     }
 
+    /**
+     * Add a thread
+     *
+     * @return static
+     */
     public function handle()
     {
         $data = [
@@ -87,6 +93,7 @@ final class AddThreadCommand
         event(new BeforeAddThreadEvent($data));
 
         $thread = Thread::create($data);
+        app(AddTagCommand::class)->attach($thread, $this->tags);
 
         event(new AfterAddThreadEvent($thread));
 

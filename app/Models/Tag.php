@@ -16,6 +16,6 @@ class Tag extends Model
      */
     public function threads()
     {
-        return $this->belongsToMany(Thread::class);
+        return $this->morphedByMany(Thread::class, 'taggable');
     }
 }

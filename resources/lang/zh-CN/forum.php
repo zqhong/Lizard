@@ -16,4 +16,10 @@ return [
     'logout' => '退出登录',
     'welcome' => '你好，:username',
     'required_login' => '您还未登录。',
+    'remember_me' => '记住密码',
+    'forgot_password' => '忘记密码？',
+    'email_address' => 'E-Mail 地址',
+    'password' => '密码',
+    'reset_password' => '重置密码',
+    'send_password_reset_link' => '发送重置密码链接至您的邮箱',
 ];

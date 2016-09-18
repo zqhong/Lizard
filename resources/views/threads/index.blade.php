@@ -16,7 +16,7 @@
                         <div>last reply user: {{ $thread->lastReplyUser->username }}</div>
                         <div>
                             tags:
-                            @foreach($thread->tags() as $tag)
+                            @foreach($thread->tags()->get() as $tag)
                                 <span>{{ $tag->name }}</span>
                             @endforeach
                         </div>

@@ -5,9 +5,10 @@ namespace Lizard\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User;
+use Lizard\Services\Tag\TaggableInterface;
 use Watson\Validating\ValidatingTrait;
 
-class Thread extends Model
+class Thread extends Model implements TaggableInterface
 {
     use ValidatingTrait;
 
@@ -43,7 +44,7 @@ class Thread extends Model
      */
     public function tags()
     {
-        return $this->morphToMany(Tag::class, 'taggable')->get();
+        return $this->morphToMany(Tag::class, 'taggable');
     }
 
     /**
