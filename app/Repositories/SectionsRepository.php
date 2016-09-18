@@ -11,14 +11,13 @@
 
 namespace Lizard\Repositories;
 
-
 use Bosnadev\Repositories\Eloquent\Repository;
 use Lizard\Models\Section;
 
 class SectionsRepository extends Repository
 {
     /**
-     * Specify Model class name
+     * Specify Model class name.
      *
      * @return string
      */
@@ -26,5 +25,4 @@ class SectionsRepository extends Repository
     {
         return Section::class;
     }
-
 }

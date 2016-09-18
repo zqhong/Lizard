@@ -12,7 +12,7 @@ class Thread extends Model
     use ValidatingTrait;
 
     /**
-     * Whether the model should throw a ValidationException if it fails validation
+     * Whether the model should throw a ValidationException if it fails validation.
      * @var bool
      */
     protected $throwValidationExceptions = true;
@@ -25,7 +25,7 @@ class Thread extends Model
     protected $fillable = ['title', 'body', 'original_body', 'user_id', 'section_id', 'node_id', 'reply_count', 'last_reply_user_id'];
 
     /**
-     * The validation rules
+     * The validation rules.
      *
      * @var array
      */
