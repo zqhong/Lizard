@@ -22,4 +22,5 @@ return [
     'password' => '密码',
     'reset_password' => '重置密码',
     'send_password_reset_link' => '发送重置密码链接至您的邮箱',
+    'add_thread' => '发表新话题',
 ];

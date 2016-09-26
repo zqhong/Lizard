@@ -5,6 +5,13 @@
     <p>
         <small>author: {{ $thread->user->username }}</small>
         <small>date: {{ $thread->updated_at }}</small>
+        @if(!empty($thread->tags))
+            <small>tags:
+                @foreach($thread->tags as $tag)
+                    {{ $tag->name }}
+                @endforeach
+            </small>
+        @endif
     </p>
     <p>
         {{ $thread->body }}

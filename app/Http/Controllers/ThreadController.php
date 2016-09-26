@@ -89,7 +89,7 @@ class ThreadController extends Controller
      */
     public function show($thread_id)
     {
-        $thread = Thread::where('id', $thread_id)->with('user', 'node')->firstOrFail();
+        $thread = Thread::where('id', $thread_id)->with('user', 'node', 'tags')->firstOrFail();
 
         return view('threads.show')
             ->withThread($thread);

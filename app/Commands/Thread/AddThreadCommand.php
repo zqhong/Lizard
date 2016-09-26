@@ -80,7 +80,6 @@ final class AddThreadCommand
     {
         $data = [
             'title' => $this->title,
-            'slug' => $this->title,
             'body' => $this->body,
             'original_body' => $this->body,
             'user_id' => $this->user_id,
