@@ -4,7 +4,6 @@ namespace Lizard\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Auth\User;
 use Lizard\Services\Tag\TaggableInterface;
 use Watson\Validating\ValidatingTrait;
 

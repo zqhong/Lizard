@@ -69,6 +69,7 @@ class EntrustSetupTables extends Migration
             'nickname' => 'admin',
             'avatar_url' => '/images/avatar.png',
             'email' => 'admin@lizard.app',
+            'mobile' => '11111111111',
             'password' => bcrypt('admin'),
         ]);
         $user->save();

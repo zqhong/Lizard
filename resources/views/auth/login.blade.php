@@ -10,15 +10,15 @@
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                         {{ csrf_field() }}
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">{{ trans('forum.email_address') }}</label>
+                        <div class="form-group{{ $errors->has('loginname') ? ' has-error' : '' }}">
+                            <label for="loginname" class="col-md-4 control-label">{{ trans('forum.loginname') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                                <input id="loginname" type="loginname" class="form-control" name="loginname" value="{{ old('loginname') }}" required autofocus>
 
-                                @if ($errors->has('email'))
+                                @if ($errors->has('loginname'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                        <strong>{{ $errors->first('loginname') }}</strong>
                                     </span>
                                 @endif
                             </div>
