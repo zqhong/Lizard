@@ -11,7 +11,6 @@
 
 namespace Lizard\Services\Tag;
 
-
 interface TaggableInterface
 {
     public function tags();

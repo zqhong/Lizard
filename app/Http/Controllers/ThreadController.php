@@ -30,7 +30,7 @@ class ThreadController extends Controller
 
     /**
      * ThreadController constructor.
-     * 
+     *
      * @param ThreadsRepository $thread
      */
     public function __construct(ThreadsRepository $thread)
@@ -83,7 +83,7 @@ class ThreadController extends Controller
 
     /**
      * Show a thread.
-     * 
+     *
      * @param $thread_id
      * @return mixed
      */
