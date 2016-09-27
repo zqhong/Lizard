@@ -11,7 +11,6 @@
 
 namespace Lizard\Commands\Tag;
 
-
 use Illuminate\Database\Eloquent\Collection;
 use Lizard\Models\Tag;
 use Lizard\Services\Tag\TaggableInterface;
@@ -28,6 +27,7 @@ final class AddTagCommand
     {
         if (empty($tags)) {
             $taggable->tags()->sync([]);
+
             return;
         }
 
@@ -63,5 +63,4 @@ final class AddTagCommand
 
         return $tagsId;
     }
-
 }

@@ -72,7 +72,7 @@ final class AddThreadCommand
     }
 
     /**
-     * Add a thread
+     * Add a thread.
      *
      * @return static
      */
