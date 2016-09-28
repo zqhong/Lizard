@@ -12,6 +12,7 @@
                         <p>
                         <div>thread_id: {{ $thread->id }}</div>
                         <div>author: {{ $thread->user->nickname }}</div>
+                        <div>section: {{ $thread->section->name }}</div>
                         <div>node: {{ $thread->node->name }}</div>
                         <div>last reply user: {{ $thread->lastReplyUser->username }}</div>
                         <div>

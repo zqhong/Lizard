@@ -33,6 +33,6 @@ class ThreadsRepository extends Repository
     {
         $this->applyCriteria();
 
-        return $this->with(['node', 'user', 'lastReplyUser'])->paginate(10);
+        return $this->with(['node', 'user', 'lastReplyUser', 'section'])->paginate(10);
     }
 }

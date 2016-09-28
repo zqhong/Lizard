@@ -57,6 +57,14 @@ class Thread extends Model implements TaggableInterface
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
+    public function section()
+    {
+        return $this->belongsTo(Section::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function user()
     {
         return $this->belongsTo(User::class);

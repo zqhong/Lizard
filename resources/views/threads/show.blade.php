@@ -3,8 +3,10 @@
 @section('content')
     <h2>{{ $thread->title }}</h2>
     <p>
-        <small>author: {{ $thread->user->username }}</small>
-        <small>date: {{ $thread->updated_at }}</small>
+        <div>author: {{ $thread->user->username }}</div>
+        <div>date: {{ $thread->updated_at }}</div>
+        <div>section: {{ $thread->section->name }}</div>
+        <div>node: {{ $thread->node->name }}</div>
         @if(!empty($thread->tags))
             <small>tags:
                 @foreach($thread->tags as $tag)
