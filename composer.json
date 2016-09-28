@@ -37,7 +37,8 @@
       "database"
     ],
     "psr-4": {
-      "Lizard\\": "app/"
+      "Lizard\\": "app/",
+      "Lizard\\Test\\": "tests/"
     }
   },
   "autoload-dev": {
