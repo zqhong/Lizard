@@ -25,4 +25,9 @@ return [
     'add_thread' => '发表新话题',
     'username' => '用户',
     'loginname' => '登陆名',
+    'create_new_thread' => '创建新话题',
+    'title' => '标题',
+    'body' => '内容',
+    'select_node' => '选择节点',
+    'submit' => '提交',
 ];
