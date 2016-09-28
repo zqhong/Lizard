@@ -13,6 +13,7 @@ return [
     'homepage' => '首页',
     'threads' => '话题',
     'login' => '登陆',
+    'register' => '注册',
     'logout' => '退出登录',
     'welcome' => '你好，:username',
     'required_login' => '您还未登录。',
@@ -20,6 +21,7 @@ return [
     'forgot_password' => '忘记密码？',
     'email_address' => 'E-Mail 地址',
     'password' => '密码',
+    'confirm_password' => '确认密码',
     'reset_password' => '重置密码',
     'send_password_reset_link' => '发送重置密码链接至您的邮箱',
     'add_thread' => '发表新话题',
@@ -30,4 +32,5 @@ return [
     'body' => '内容',
     'select_node' => '选择节点',
     'submit' => '提交',
+    'search' => '搜索',
 ];

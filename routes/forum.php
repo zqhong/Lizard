@@ -15,7 +15,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
     // Registration Routes...
-    Route::get('register', 'Auth\RegisterController@showRegistrationForm');
+    Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
     Route::post('register', 'Auth\RegisterController@register');
 
     // Password Reset Routes...

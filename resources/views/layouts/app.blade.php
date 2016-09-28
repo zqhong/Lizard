@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="{{ elixir('dist/css/all.css') }}">
     <link rel="stylesheet" href="{{ elixir('css/app.css') }}">
 </head>
-<body>
-<div class="container">
+<body id="forum">
+@include('partials.nav')
+<div id="main" class="container">
     @include('partials.error')
     @yield('content')
 </div>
