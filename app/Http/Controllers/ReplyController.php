@@ -6,7 +6,6 @@ use Auth;
 use Illuminate\Http\Request;
 use Input;
 use Lizard\Commands\Reply\AddReplyCommand;
-use Lizard\Http\Requests;
 use Redirect;
 
 class ReplyController extends Controller
