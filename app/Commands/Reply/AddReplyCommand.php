@@ -11,7 +11,6 @@
 
 namespace Lizard\Commands\Reply;
 
-
 use Lizard\Events\AfterAddReplyEvent;
 use Lizard\Events\BeforeAddReplyEvent;
 use Lizard\Models\Reply;
@@ -19,12 +18,12 @@ use Lizard\Models\Reply;
 final class AddReplyCommand
 {
     /**
-     * @var integer
+     * @var int
      */
     protected $thread_id;
 
     /**
-     * @var integer
+     * @var int
      */
     protected $user_id;
 
@@ -62,8 +61,8 @@ final class AddReplyCommand
     }
 
     /**
-     * Add a reply
-     * 
+     * Add a reply.
+     *
      * @return Reply
      */
     public function handle()

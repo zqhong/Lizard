@@ -14,7 +14,6 @@ namespace Lizard\Test\Utils;
 use Lizard\Test\AbstractTestCase;
 use Lizard\Utils\StringHelper;
 
-
 class StringHelperTest extends AbstractTestCase
 {
     public function testIsEmail()
