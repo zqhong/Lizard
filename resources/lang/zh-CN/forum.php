@@ -33,4 +33,5 @@ return [
     'select_node' => '选择节点',
     'submit' => '提交',
     'search' => '搜索',
+    'registered_user' => '已注册用户请',
 ];

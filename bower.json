@@ -19,6 +19,8 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "select2": "^4.0.3",
-    "jquery": "^3.1.0"
+    "jquery": "^3.1.0",
+    "font-awesome": "^4.6.3",
+    "bourbon": "^4.2.7"
   }
 }

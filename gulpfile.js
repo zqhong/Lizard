@@ -18,9 +18,10 @@ elixir(function (mix) {
         'vendor/bower_components/bootstrap/dist/css/bootstrap.min.css',
         'vendor/bower_components/bootstrap/dist/css/bootstrap-theme.min.css',
         'vendor/bower_components/select2/dist/css/select2.min.css',
-    ], 'public/dist/css/all.css', './');
+        'vendor/bower_components/font-awesome/css/font-awesome.min.css',
+    ], 'public/css/all.css', './');
 
-    mix.styles([
+    mix.sass([
         'resources/assets/sass/app.scss',
     ], 'public/css/app.css', './');
 
@@ -28,18 +29,19 @@ elixir(function (mix) {
         'vendor/bower_components/jquery/dist/jquery.min.js',
         'vendor/bower_components/bootstrap/dist/js/bootstrap.min.js',
         'vendor/bower_components/select2/dist/js/select2.min.js',
-    ], 'public/dist/js/all.js', './');
+    ], 'public/js/all.js', './');
 
     mix.scripts([
         'resources/assets/js/app.js',
     ], 'public/js/app.js', './');
 
     mix.version([
-        'public/dist/css/all.css',
+        'public/css/all.css',
         'public/css/app.css',
-        'public/dist/js/all.js',
+        'public/js/all.js',
         'public/js/app.js',
     ]);
 
-    mix.copy('vendor/bower_components/bootstrap/dist/fonts', 'public/fonts');
+    mix.copy('vendor/bower_components/bootstrap/dist/fonts', 'public/build/fonts');
+    mix.copy('vendor/bower_components/font-awesome/fonts', 'public/build/fonts');
 });

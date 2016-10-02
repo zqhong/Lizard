@@ -1,7 +1,3 @@
-html, body {
-  height: 100%;
-  font-size: 14px;
-  color: #333333;
-  font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
-  background: #ececec;
-}
+@import "variables";
+@import "./vendor/bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "pages/forum/base";

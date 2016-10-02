@@ -27,21 +27,6 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="panel panel-default">
-                <div class="panel-heading">Lizard</div>
-                <div class="panel-body">
-                    @if(Auth::guest())
-                        {{ trans('forum.required_login') }}
-                        {{ link_to_route('login', trans('forum.login')) }}
-                    @else
-                        {{ trans('forum.welcome', ['username' => Auth::user()->username]) }}
-                        {{ link_to_route('logout', trans('forum.logout')) }}
-                        <br >
-                        {{ link_to_route('thread.create', trans('forum.add_thread')) }}
-                    @endif
-                </div>
-            </div>
-        </div>
+        @include('partials.sidebar')
     </div>
 @endsection
