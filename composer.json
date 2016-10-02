@@ -20,7 +20,8 @@
     "anahkiasen/former": "^4.0",
     "laravelcollective/html": "^5.3",
     "patricktalmadge/bootstrapper": "^5.9",
-    "watson/validating": "^3.0"
+    "watson/validating": "^3.0",
+    "jenssegers/agent": "^2.3"
   },
   "require-dev": {
     "mockery/mockery": "^0.9.5",
@@ -40,11 +41,6 @@
       "Lizard\\": "app/",
       "Lizard\\Test\\": "tests/"
     }
-  },
-  "autoload-dev": {
-    "classmap": [
-      "tests/TestCase.php"
-    ]
   },
   "scripts": {
     "post-root-package-install": [

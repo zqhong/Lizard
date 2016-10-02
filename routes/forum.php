@@ -30,4 +30,6 @@ Route::group(['middleware' => 'web'], function () {
     ]);
 
     Route::resource('thread', 'ThreadController');
+
+    Route::resource('reply', 'ReplyController');
 });

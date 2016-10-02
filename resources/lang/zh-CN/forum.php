@@ -34,4 +34,10 @@ return [
     'submit' => '提交',
     'search' => '搜索',
     'registered_user' => '已注册用户请',
+    'add_reply' => '发表回复',
+    'reply' => '回复',
+    'need_login' => sprintf('需要 %s 后方可回复, 如果你还没有账号请点击这里 %s。',
+        link_to_route('login', '登陆', [], ['class' => 'btn btn-success']), link_to_route('register', '注册', [], ['class' => 'btn btn-primary'])),
+    'add_thread_success' => '发表文章成功',
+    'add_reply_success' => '发表评论成功',
 ];

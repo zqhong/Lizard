@@ -71,7 +71,7 @@ $factory->define(Reply::class, function (Faker\Generator $faker) {
         'user_id' => 1,
         'original_body' => $body,
         'body' => $body,
-        'device_name' => $devices[array_rand($devices)],
+        'user_agent' => $devices[array_rand($devices)],
         'created_at' => time(),
         'updated_at' => time(),
     ];

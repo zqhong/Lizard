@@ -74,7 +74,7 @@ final class AddThreadCommand
     /**
      * Add a thread.
      *
-     * @return static
+     * @return Thread
      */
     public function handle()
     {

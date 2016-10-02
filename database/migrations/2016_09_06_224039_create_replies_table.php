@@ -19,7 +19,7 @@ class CreateRepliesTable extends Migration
             $table->integer('user_id');
             $table->string('original_body');
             $table->string('body');
-            $table->string('device_name');
+            $table->string('user_agent');
             $table->timestamps();
         });
     }

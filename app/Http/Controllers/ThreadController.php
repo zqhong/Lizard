@@ -11,7 +11,6 @@
 
 namespace Lizard\Http\Controllers;
 
-use AltThree\Validator\ValidationException;
 use Auth;
 use Input;
 use Lizard\Commands\Thread\AddThreadCommand;
@@ -71,14 +70,14 @@ class ThreadController extends Controller
                 $node_id,
                 $tags
             ));
-        } catch (ValidationException $e) {
+        } catch (\Exception $e) {
             return Redirect::route('thread.create')
                 ->withInput(Input::all())
                 ->withErrors($e->getMessageBag());
         }
 
         return Redirect::route('thread.show', [$thread->id])
-            ->withSuccess('Add thread success');
+            ->withSuccess(trans('forum.add_thread_success'));
     }
 
     /**
@@ -89,7 +88,7 @@ class ThreadController extends Controller
      */
     public function show($thread_id)
     {
-        $thread = Thread::where('id', $thread_id)->with('user', 'node', 'tags', 'section')->firstOrFail();
+        $thread = Thread::where('id', $thread_id)->with('user', 'node', 'tags', 'section', 'replies')->firstOrFail();
 
         return view('threads.show')
             ->withThread($thread);

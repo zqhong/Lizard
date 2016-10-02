@@ -1,7 +1,6 @@
 <?php
 
 
-
 return [
 
     /*
@@ -173,6 +172,7 @@ return [
         Overtrue\LaravelPinyin\ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Bootstrapper\BootstrapperL5ServiceProvider::class,
+        Jenssegers\Agent\AgentServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -240,6 +240,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Panel' => Bootstrapper\Facades\Panel::class,
+        'Agent' => Jenssegers\Agent\Facades\Agent::class,
     ],
 
 ];
