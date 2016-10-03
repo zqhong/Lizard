@@ -25,6 +25,9 @@
                         <p>{{ $thread->body }}</p>
                     @endforeach
                 </div>
+                <div class="panel-footer">
+                    <div class="text-center">{{ $threads->links() }}</div>
+                </div>
             </div>
         </div>
         @include('partials.sidebar')
