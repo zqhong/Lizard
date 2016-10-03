@@ -29,6 +29,7 @@ elixir(function (mix) {
         'vendor/bower_components/jquery/dist/jquery.min.js',
         'vendor/bower_components/bootstrap/dist/js/bootstrap.min.js',
         'vendor/bower_components/select2/dist/js/select2.min.js',
+        'vendor/bower_components/moment/min/moment-with-locales.min.js',
     ], 'public/js/all.js', './');
 
     mix.scripts([

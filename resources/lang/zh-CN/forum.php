@@ -40,4 +40,6 @@ return [
         link_to_route('login', '登陆', [], ['class' => 'btn btn-success']), link_to_route('register', '注册', [], ['class' => 'btn btn-primary'])),
     'add_thread_success' => '发表文章成功',
     'add_reply_success' => '发表评论成功',
+    'like' => '赞',
+    'unlike' => '踩',
 ];
