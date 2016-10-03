@@ -70,7 +70,6 @@ class Thread extends Model implements TaggableInterface
         return $this->belongsTo(User::class);
     }
 
-
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
