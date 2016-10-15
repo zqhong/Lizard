@@ -167,7 +167,6 @@ return [
         /*
          * Package Service Providers...
          */
-        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Zizaco\Entrust\EntrustServiceProvider::class,
         Overtrue\LaravelPinyin\ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
