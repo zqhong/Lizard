@@ -8,12 +8,21 @@ php:
 
 sudo: false
 
-install:
+
+services:
+  - mysql
+
+before_script:
+  - cp .env.travis .env
+  - mysql -e 'create database homestead_test;'
+  - php artisan migrate -vvv
+  - composer self-update
   - composer --prefer-source install
 
 cache:
   directories:
     - ./vendor
+
 
 notifications:
   email:
