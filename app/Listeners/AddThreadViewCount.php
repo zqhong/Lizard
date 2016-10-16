@@ -6,8 +6,6 @@ use Lizard\Events\BeforeShowThread;
 
 class AddThreadViewCount
 {
-
-
     /**
      * Handle the event.
      *
