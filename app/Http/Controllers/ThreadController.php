@@ -14,6 +14,7 @@ namespace Lizard\Http\Controllers;
 use Auth;
 use Input;
 use Lizard\Commands\Thread\AddThreadCommand;
+use Lizard\Events\BeforeShowThread;
 use Lizard\Models\Node;
 use Lizard\Models\Section;
 use Lizard\Models\Thread;
@@ -90,6 +91,8 @@ class ThreadController extends Controller
     {
         $thread = Thread::where('id', $thread_id)->with('user', 'node', 'tags', 'section', 'replies')->firstOrFail();
         $lastReply = end($thread->replies);
+
+        event(new BeforeShowThread($thread));
 
         return view('threads.show')
             ->withThread($thread)

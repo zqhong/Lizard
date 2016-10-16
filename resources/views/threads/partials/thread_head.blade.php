@@ -15,7 +15,7 @@
         <a href="">{{ $thread->user->nickname }}</a>
         • 于 <abbr title="{{ $thread->created_at }}" class="timeago">{{ $thread->created_at }}</abbr>
         • 回复 <a href="">{{ $thread->lastReplyUser->nickname }}</a> 于 <abbr title="{{ $thread->updated_at }}" class="timeago">{{ $thread->updated_at }}</abbr>
-        • 8 阅读
+        • {{ $thread->view_count }}{{ trans('forum.read') }}
     </div>
     <div class="clearfix"></div>
 </div>

@@ -43,4 +43,5 @@ return [
     'like' => '赞',
     'unlike' => '踩',
     'about' => '关于',
+    'read' => '阅读',
 ];

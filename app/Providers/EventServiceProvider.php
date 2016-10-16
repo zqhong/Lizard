@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'Lizard\Events\SomeEvent' => [
-            'Lizard\Listeners\EventListener',
+        'Lizard\Events\BeforeShowThread' => [
+            'Lizard\Listeners\AddThreadViewCount',
         ],
     ];
 
