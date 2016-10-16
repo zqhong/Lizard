@@ -18,6 +18,7 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="{!! route('home') !!}">{{ trans('forum.homepage') }} <span
                                     class="sr-only">(current)</span></a></li>
+                    <li><a href="#">{{ trans('forum.about') }}</a></li>
                 </ul>
                 <form class="navbar-form navbar-left">
                     <div class="form-group">

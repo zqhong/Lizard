@@ -42,4 +42,5 @@ return [
     'add_reply_success' => '发表评论成功',
     'like' => '赞',
     'unlike' => '踩',
+    'about' => '关于',
 ];

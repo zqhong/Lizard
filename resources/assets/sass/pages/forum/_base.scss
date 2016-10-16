@@ -3,7 +3,16 @@ html, body {
   font-size: 14px;
   color: #333333;
   font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, Hiragino Sans GB, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
-  background: #ececec;
+}
+
+html {
+   background: #fff url(../../images/bg.jpg) no-repeat fixed;
+   background-size: cover;
+ }
+
+body {
+  opacity: .8;
+  background: rgba(255,255,255,0);
 }
 
 .inline-block {
