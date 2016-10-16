@@ -44,4 +44,5 @@ return [
     'unlike' => '踩',
     'about' => '关于',
     'read' => '阅读',
+    'tag' => '标签',
 ];

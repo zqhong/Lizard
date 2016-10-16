@@ -19,12 +19,15 @@
         </a>
     </div>
     <div class="pull-right">
-                  <span class="tag-list hidden-xs">
-              Tags:
-                    <a href="/tag/tag1"><span class="tag">tag1</span></a>
-                    <a href="/tag/tag2"><span class="tag">tag2</span></a>
-                    <a href="/tag/tag3"><span class="tag">tag3</span></a>
-                    </span>
+        @if(!empty($thread->tags))
+            <span class="tag-list hidden-xs">
+                {{ trans('forum.tag') }}:
+                @foreach($thread->tags as $tag)
+                    <a href="#"><span class="tag">{{ $tag->name }}</span></a>
+                @endforeach
+            </span>
+        @endif
+
         <a class="followable" data-action="follow" data-id="5" data-type="Thread" href="javascript:void(0);"
            data-url="">
             <i class="fa fa-eye"></i> <span>关注</span>
