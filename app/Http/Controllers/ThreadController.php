@@ -14,7 +14,6 @@ namespace Lizard\Http\Controllers;
 use Auth;
 use Input;
 use Lizard\Commands\Thread\AddThreadCommand;
-use Lizard\Events\BeforeShowThread;
 use Lizard\Models\Node;
 use Lizard\Models\Section;
 use Lizard\Models\Thread;
