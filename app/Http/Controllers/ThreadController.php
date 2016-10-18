@@ -94,7 +94,7 @@ class ThreadController extends Controller
         $thread->view_count += 1;
         $thread->save();
 
-        $lastReply = end($thread->replies);
+        $lastReply = $thread->replies->last();
 
         return view('threads.show')
             ->withThread($thread)

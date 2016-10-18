@@ -13,9 +13,12 @@
     </div>
     <div class="meta inline-block">
         <a href="">{{ $thread->user->nickname }}</a>
-        • 于 <abbr title="{{ $thread->created_at }}" class="timeago">{{ $thread->created_at }}</abbr>
-        • 回复 <a href="">{{ $thread->lastReplyUser->nickname }}</a> 于 <abbr title="{{ $thread->updated_at }}" class="timeago">{{ $thread->updated_at }}</abbr>
-        • {{ $thread->view_count }}{{ trans('forum.read') }}
+        • {{ trans('forum.at') }} <abbr title="{{ $thread->created_at }}" class="timeago">{{ $thread->created_at }}</abbr>
+        • {{ trans('forum.reply') }}
+        @if(!empty($last_reply))
+            <a href="">{{ $thread->lastReplyUser->nickname }}</a> 于 <abbr title="{{ $thread->updated_at }}" class="timeago">{{ $last_reply->updated_at }}</abbr>
+        @endif
+        • {{ $thread->view_count }} {{ trans('forum.read') }}
     </div>
     <div class="clearfix"></div>
 </div>
