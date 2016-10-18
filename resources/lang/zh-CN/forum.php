@@ -46,4 +46,6 @@ return [
     'read' => '阅读',
     'tag' => '标签',
     'at' => '于',
+    'reply_total_count' => '回复总数',
+    'empty_reply' => '暂无回复',
 ];
