@@ -5,7 +5,7 @@ Lizard is a free forum software based on the Laravel PHP Framework.
 [![Build Status](https://travis-ci.org/zqhong/Lizard.svg?branch=develop)](https://travis-ci.org/zqhong/Lizard)
 
 # Screenshot
-![screenshot_20161016](Screenshot/Screenshot_20161016.jpg)
+![screenshot_20161016](Screenshot/Screenshot_20161019.jpg)
 
 ## License
 
