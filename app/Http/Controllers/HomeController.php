@@ -11,7 +11,6 @@
 
 namespace Lizard\Http\Controllers;
 
-use Illuminate\Support\Str;
 use Input;
 use Lizard\Models\Thread;
 use Lizard\Repositories\Criteria\Thread\Filter;

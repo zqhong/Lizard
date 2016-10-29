@@ -21,7 +21,7 @@ class StringHelper
      */
     public static function isEmail($str)
     {
-        return (bool)filter_var($str, FILTER_VALIDATE_EMAIL);
+        return (bool) filter_var($str, FILTER_VALIDATE_EMAIL);
     }
 
     /**
@@ -32,7 +32,6 @@ class StringHelper
      */
     public static function isPhoneNum($str)
     {
-        return (bool)preg_match('/^1\d{10}$/', $str);
+        return (bool) preg_match('/^1\d{10}$/', $str);
     }
-
 }
