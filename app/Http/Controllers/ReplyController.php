@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Input;
 use Lizard\Commands\Reply\AddReplyCommand;
 use Redirect;
+use Illuminate\Validation\ValidationException;
 
 class ReplyController extends Controller
 {
@@ -29,7 +30,7 @@ class ReplyController extends Controller
                 $body,
                 $request->header('User-Agent')
             ));
-        } catch (\Exception $e) {
+        } catch (ValidationException $e) {
             return Redirect::back()
                 ->withInput(Input::all())
                 ->withErrors($e->getMessageBag());

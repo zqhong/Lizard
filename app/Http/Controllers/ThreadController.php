@@ -19,6 +19,7 @@ use Lizard\Models\Section;
 use Lizard\Models\Thread;
 use Lizard\Repositories\ThreadsRepository;
 use Redirect;
+use Illuminate\Validation\ValidationException;
 
 class ThreadController extends Controller
 {
@@ -70,7 +71,7 @@ class ThreadController extends Controller
                 $node_id,
                 $tags
             ));
-        } catch (\Exception $e) {
+        } catch (ValidationException $e) {
             return Redirect::route('thread.create')
                 ->withInput(Input::all())
                 ->withErrors($e->getMessageBag());

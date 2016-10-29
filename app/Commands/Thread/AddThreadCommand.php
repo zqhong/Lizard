@@ -11,6 +11,7 @@
 
 namespace Lizard\Commands\Thread;
 
+use Illuminate\Support\Str;
 use Lizard\Commands\Tag\AddTagCommand;
 use Lizard\Events\AfterAddThreadEvent;
 use Lizard\Events\BeforeAddThreadEvent;
@@ -64,7 +65,7 @@ final class AddThreadCommand
      */
     public function __construct($title, $body, $user_id, $node_id, $tags)
     {
-        $this->title = $title;
+        $this->title = Str::substr($title, 0, 255);
         $this->body = $body;
         $this->user_id = $user_id;
         $this->node_id = $node_id;
