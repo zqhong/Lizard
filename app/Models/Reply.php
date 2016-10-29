@@ -3,7 +3,6 @@
 namespace Lizard\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Auth\User;
 
 class Reply extends Model
 {
