@@ -1,9 +1,9 @@
 language: php
 
 php:
-  - 5.6
+  - '5.6'
   - '7.0'
-  - nightly
+  - hhvm
 
 sudo: false
 
@@ -16,7 +16,9 @@ before_script:
   - mysql -e 'create database homestead_test;'
   - php artisan migrate -vvv
   - composer self-update
-  - composer --prefer-source install
+  - git config --global user.email $EMAIL_ADDRESS
+  - git config --global user.name $USER_NAME
+  - git config --global push.default matching
 
 cache:
   directories:
@@ -31,3 +33,14 @@ notifications:
     on_failure: always
 
 script: vendor/bin/phpunit -c phpunit.xml
+
+deploy:
+  provider: openshift
+  user: $OPENSSHITF_USERNAME
+  password: $OPENSHITF_PASSWORD
+  domain: $OPENSSHITF_DOMAIN
+  app: $APP_NAME
+  deployment_branch: master
+  on:
+    repo: zqhong/Lizard
+    all_branches: true
